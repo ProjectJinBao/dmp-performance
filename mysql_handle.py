@@ -4,7 +4,7 @@ import pymysql
 class mysql_handle():
 
     def __init__(self):
-        self.conn = pymysql.connect(host="106.75.241.175",
+        self.conn = pymysql.connect(host="127.0.0.1",
                                     port=3306,
                                     user="root",
                                     passwd="123456",

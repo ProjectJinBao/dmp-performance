@@ -18,6 +18,8 @@ num_requests = 14
 user_count = 10
 used_time = datetime.datetime.now() - start_time
 
+print(start_time)
+print(used_time)
 
 
 mysql_conn = mysql_handle.mysql_handle()
