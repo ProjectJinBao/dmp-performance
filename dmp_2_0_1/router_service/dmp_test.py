@@ -14,6 +14,6 @@ class WebsitTasks(TaskSet):
 
 class WebsiteUser(HttpLocust):
     task_set = WebsitTasks
-    host = "https://dmp-n1.daocloud.io"
+    host = "http://192.168.0.105:32101"
     min_wait = 0
     max_wait = 0
