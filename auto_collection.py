@@ -148,7 +148,7 @@ if __name__ == '__main__':
     #     print("users 5000 error")
     #     time.sleep(60)
 
-    main(count=1460, hatch_rate=50, users=100)
+    main(count=10, hatch_rate=50, users=100)
     time.sleep(60)
     # main(count=1460, hatch_rate=50, users=3500)
     # time.sleep(60)
