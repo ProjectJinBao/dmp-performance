@@ -8,7 +8,7 @@ import os
 
 def main(count, hatch_rate, users):
     # workspace_base = "/Users/xumin/Desktop/test"
-    workspace_base = "/data/locust_data"
+    workspace_base = "/root/locust_data"
     start_time = datetime.datetime.now()
 
     workspace_path = create_workspace(workspace_base=workspace_base, start_time=start_time)
@@ -33,7 +33,7 @@ def main(count, hatch_rate, users):
 
 
 def start(count, hatch_rate):
-    start_url = "http://106.75.239.226:8089/swarm"
+    start_url = "http://127.0.0.1:8089/swarm"
 
     payload = "locust_count=%s&hatch_rate=%s" % (count, hatch_rate)
     headers = {
@@ -47,12 +47,12 @@ def start(count, hatch_rate):
 
 
 def end():
-    end_url = "http://106.75.239.226:8089/stop"
+    end_url = "http://127.0.0.1:8089/stop"
     requests.request("GET", end_url)
 
 
 def stats(start_time, mysqlconn):
-    stats_url = "http://106.75.239.226:8089/stats/requests"
+    stats_url = "http://127.0.0.1:8089/stats/requests"
     response = requests.request("GET", stats_url)
 
     content = json.loads(response.text)
@@ -90,21 +90,21 @@ def create_workspace(workspace_base, start_time):
 
 
 def donwload_statistics(workspace_path):
-    url = "http://106.75.239.226:8089/stats/requests/csv"
+    url = "http://127.0.0.1:8089/stats/requests/csv"
     response = requests.request("GET", url)
     with open("%s/statistics_data_%s.csv" % (workspace_path, time.time()), "wb") as code:
         code.write(response.content)
 
 
 def download_distribution(workspace_path):
-    url = "http://106.75.239.226:8089/stats/distribution/csv"
+    url = "http://127.0.0.1:8089/stats/distribution/csv"
     response = requests.request("GET", url)
     with open("%s/distribution_data_%s.csv" % (workspace_path, time.time()), "wb") as code:
         code.write(response.content)
 
 
 def download_exceptions(workspace_path):
-    url = "http://106.75.239.226:8089/exceptions/csv"
+    url = "http://127.0.0.1:8089/exceptions/csv"
     response = requests.request("GET", url)
     with open("%s/exceptions_data_%s.csv" % (workspace_path, time.time()), "wb") as code:
         code.write(response.content)
@@ -150,18 +150,18 @@ if __name__ == '__main__':
 
     main(count=1460, hatch_rate=50, users=3000)
     time.sleep(60)
-    main(count=1460, hatch_rate=50, users=3500)
-    time.sleep(60)
-    main(count=1460, hatch_rate=50, users=4000)
-    time.sleep(60)
-    main(count=1460, hatch_rate=50, users=4500)
-    time.sleep(60)
-    main(count=1460, hatch_rate=50, users=5000)
-    time.sleep(60)
-    main(count=1460, hatch_rate=50, users=5500)
-    time.sleep(60)
-    main(count=1460, hatch_rate=50, users=6000)
-    time.sleep(60)
+    # main(count=1460, hatch_rate=50, users=3500)
+    # time.sleep(60)
+    # main(count=1460, hatch_rate=50, users=4000)
+    # time.sleep(60)
+    # main(count=1460, hatch_rate=50, users=4500)
+    # time.sleep(60)
+    # main(count=1460, hatch_rate=50, users=5000)
+    # time.sleep(60)
+    # main(count=1460, hatch_rate=50, users=5500)
+    # time.sleep(60)
+    # main(count=1460, hatch_rate=50, users=6000)
+    # time.sleep(60)
 
     # main(count=740, hatch_rate=50, users=3500)
     # time.sleep(60)

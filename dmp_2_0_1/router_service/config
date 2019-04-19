@@ -1,2 +1,2 @@
-volumes="/Users/xumin/jo/dmp-performance/dmp_2_0_1/router_service"
+volumes="/root/dmp-performance/dmp_2_0_1/router_service"
 filename="dmp_test.py"
