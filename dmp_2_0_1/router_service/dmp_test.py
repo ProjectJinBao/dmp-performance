@@ -6,7 +6,7 @@ class WebsitTasks(TaskSet):
     @task
     def s1_200ms1k(self):
 
-        with self.client.get("/service/s1/500ms/1k", catch_response=True) as response:
+        with self.client.get("/service/s1/200ms/20k", catch_response=True) as response:
             if response.status_code == 200:
                 pass
             else:
