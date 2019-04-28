@@ -9,6 +9,8 @@ headers = {
     'postman-token': "3c01f642-525e-13e0-d974-419a183df83e"
     }
 
+
+requests.request("DELETE", url)
 response = requests.request("PUT", url, data=payload, headers=headers)
 
 print(response.text)
