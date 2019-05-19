@@ -10,7 +10,7 @@ class WebsitTasks(TaskSet):
             'performance': "head"
         }
 
-        with self.client.get("/pq/s1/200ms/1k", headers=headers, catch_response=True) as response:
+        with self.client.get("/ph/s1/200ms/1k", headers=headers, catch_response=True) as response:
             if response.status_code == 200:
                 pass
             else:
