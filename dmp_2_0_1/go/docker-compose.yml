@@ -1,0 +1,334 @@
+version: '3'
+services:
+  master:
+    image: christianbladescb/locustio
+    ports:
+      - 8089:8089
+      - 5557:5557
+      - 5558:5558
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    container_name: master
+    command:
+      -f dmp_test.py --master --no-reset-stats
+
+  slave1:
+    image: christianbladescb/locustio
+    container_name: slave1
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave2:
+    image: christianbladescb/locustio
+    container_name: slave2
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave3:
+    image: christianbladescb/locustio
+    container_name: slave3
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave4:
+    image: christianbladescb/locustio
+    container_name: slave4
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave5:
+    image: christianbladescb/locustio
+    container_name: slave5
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave6:
+    image: christianbladescb/locustio
+    container_name: slave6
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave7:
+    image: christianbladescb/locustio
+    container_name: slave7
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave8:
+    image: christianbladescb/locustio
+    container_name: slave8
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave9:
+    image: christianbladescb/locustio
+    container_name: slave9
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave10:
+    image: christianbladescb/locustio
+    container_name: slave10
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave11:
+    image: christianbladescb/locustio
+    container_name: slave11
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave12:
+    image: christianbladescb/locustio
+    container_name: slave12
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave13:
+    image: christianbladescb/locustio
+    container_name: slave13
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave14:
+    image: christianbladescb/locustio
+    container_name: slave14
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave15:
+    image: christianbladescb/locustio
+    container_name: slave15
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave16:
+    image: christianbladescb/locustio
+    container_name: slave16
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave17:
+    image: christianbladescb/locustio
+    container_name: slave17
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+
+  slave18:
+    image: christianbladescb/locustio
+    container_name: slave18
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave19:
+    image: christianbladescb/locustio
+    container_name: slave19
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave20:
+    image: christianbladescb/locustio
+    container_name: slave20
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave21:
+    image: christianbladescb/locustio
+    container_name: slave21
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave22:
+    image: christianbladescb/locustio
+    container_name: slave22
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave23:
+    image: christianbladescb/locustio
+    container_name: slave23
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave24:
+    image: christianbladescb/locustio
+    container_name: slave24
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave25:
+    image: christianbladescb/locustio
+    container_name: slave25
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave26:
+    image: christianbladescb/locustio
+    container_name: slave26
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave27:
+    image: christianbladescb/locustio
+    container_name: slave27
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave28:
+    image: christianbladescb/locustio
+    container_name: slave28
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave29:
+    image: christianbladescb/locustio
+    container_name: slave29
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave30:
+    image: christianbladescb/locustio
+    container_name: slave30
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave31:
+    image: christianbladescb/locustio
+    container_name: slave31
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
+
+  slave32:
+    image: christianbladescb/locustio
+    container_name: slave32
+    links:
+      - master
+    volumes:
+      - /root/dmp-performance/dmp_2_0_1/router_service:/locust
+    command:
+      -f dmp_test.py --slave  --master-host=master --no-reset-stats
