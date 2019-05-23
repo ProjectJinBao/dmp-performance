@@ -18,7 +18,7 @@ class WebsitTasks(TaskSet):
 
 class WebsiteUser(HttpLocust):
     task_set = WebsitTasks
-    host = "http://10.82.194.219:9033"
+    host = "http://192.168.0.82:30367"
     # host = "http://192.168.0.105:31251"
     min_wait = 0
     max_wait = 0
