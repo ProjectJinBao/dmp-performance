@@ -6,7 +6,7 @@ class WebsitTasks(TaskSet):
     @task
     def s1_200ms1k(self):
 
-        headers = {"header":"904ccaff-b505-4a7e-ae57-4a6fd44c86b8"}
+        headers = {"mock":"904ccaff-b505-4a7e-ae57-4a6fd44c86b8"}
 
         with self.client.get("/ps/s1/200ms/1k", headers=headers, catch_response=True) as response:
             if response.status_code == 200:
