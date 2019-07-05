@@ -6,7 +6,7 @@ class WebsitTasks(TaskSet):
     @task
     def s1_200ms1k(self):
 
-        headers = {"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.6LLkmZF1p3mz6EKYR-DUzaRhVfOjwu34PPOws9PR1-g"}
+        headers = {"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.XbPfbIHMI6arZ3Y922BhjWgQzWXcXNrz0ogtVhfEd2o"}
 
         with self.client.get("/jwt/s1/200ms/1k", headers=headers, catch_response=True) as response:
             if response.status_code == 200:
