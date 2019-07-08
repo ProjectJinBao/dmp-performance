@@ -14,6 +14,7 @@ class WebsitTasks(TaskSet):
             if response.status_code == 200:
                 pass
             else:
+                print(response)
                 response.failure(response)
 
 class WebsiteUser(HttpLocust):
