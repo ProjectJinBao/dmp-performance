@@ -152,6 +152,15 @@ if __name__ == '__main__':
     # time.sleep(60)
     main(count=1464, hatch_rate=50, users=2000)
     time.sleep(60)
+
+    main(count=1464, hatch_rate=50, users=2000)
+    time.sleep(60)
+
+    main(count=1464, hatch_rate=50, users=2000)
+    time.sleep(60)
+
+    main(count=1464, hatch_rate=50, users=2000)
+    time.sleep(60)
     # main(count=1464, hatch_rate=50, users=2500)
     # time.sleep(60)
     # main(count=1464, hatch_rate=50, users=3000)
