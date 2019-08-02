@@ -150,17 +150,24 @@ if __name__ == '__main__':
 
     # main(count=1464, hatch_rate=50, users=1500)
     # time.sleep(60)
-    main(count=1464, hatch_rate=50, users=2000)
+    main(count=1464, hatch_rate=50, users=3000)
     time.sleep(60)
 
-    main(count=1464, hatch_rate=50, users=2000)
+    main(count=1464, hatch_rate=50, users=3000)
     time.sleep(60)
 
-    main(count=1464, hatch_rate=50, users=2000)
+    main(count=1464, hatch_rate=50, users=3000)
     time.sleep(60)
 
-    main(count=1464, hatch_rate=50, users=2000)
+    main(count=1464, hatch_rate=50, users=3500)
     time.sleep(60)
+
+    main(count=1464, hatch_rate=50, users=3500)
+    time.sleep(60)
+
+    main(count=1464, hatch_rate=50, users=3500)
+    time.sleep(60)
+
     # main(count=1464, hatch_rate=50, users=2500)
     # time.sleep(60)
     # main(count=1464, hatch_rate=50, users=3000)
