@@ -1,4 +1,4 @@
-from locust import HttpLocust, TaskSet, task
+from locust import HttpLocust, TaskSet, task, between
 import json
 
 class WebsitTasks(TaskSet):
@@ -18,3 +18,4 @@ class WebsiteUser(HttpLocust):
     # host = "http://192.168.0.105:31251"
     min_wait = 0
     max_wait = 0
+    wait_time = between(0, 0)
